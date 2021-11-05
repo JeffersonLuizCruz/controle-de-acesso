@@ -3,44 +3,27 @@ package com.overlay.model;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
-import org.springframework.lang.NonNull;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import io.micronaut.core.annotation.Introspected;
-
-@Introspected
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@Nullable
 	private Long id;
 
-	@NotNull
-	@NonNull
 	private String name;
 	private String email;
 
-	@NotNull
-	@NonNull
 	private String password;
 
 	private Role role;
 
-	@NotNull
-	@NonNull
-	@JsonIgnore
 	private List<RequestStage> requestStages;
 
 	public Long getId() {
 		return id;
 	}
 
-	public void setId(@Nullable Long id) {
+	public void setId( Long id) {
 		this.id = id;
 	}
 
@@ -48,7 +31,7 @@ public class User implements Serializable {
 		return name;
 	}
 
-	public void setName(@NonNull String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -64,7 +47,7 @@ public class User implements Serializable {
 		return password;
 	}
 
-	public void setPassword(@NotNull @NonNull String password) {
+	public void setPassword( String password) {
 		this.password = password;
 	}
 
@@ -80,14 +63,9 @@ public class User implements Serializable {
 		return requestStages;
 	}
 
-	public void setRequestStages(@NotNull @NonNull List<RequestStage> requestStages) {
+	public void setRequestStages( List<RequestStage> requestStages) {
 		this.requestStages = requestStages;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", role=" + role
-				+ ", requestStages=" + requestStages + "]";
-	}
 
 }
