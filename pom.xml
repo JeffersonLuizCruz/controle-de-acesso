@@ -71,8 +71,12 @@
 <!-- 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
+<<<<<<< Updated upstream
 			<version>8.0.3</version>
 		</dependency> -->
+=======
+		</dependency>
+>>>>>>> Stashed changes
 
 	</dependencies>
 
