@@ -1,6 +1,6 @@
 package com.overlay.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 public class Request {
@@ -8,7 +8,7 @@ public class Request {
 	private Long id;
 	private String subject;
 	private String description;
-	private Date criationDate;
+	private LocalDate criationDate;
 	
 	private RequestState state;
 	

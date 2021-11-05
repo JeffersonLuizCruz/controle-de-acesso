@@ -1,11 +1,11 @@
 package com.overlay.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class RequestStage {
 
 	private Long id;
-	private Date realizationDate;
+	private LocalDate realizationDate;
 	private String description;
 	
 	private RequestState state;
