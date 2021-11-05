@@ -1,11 +1,10 @@
-package com.overlay.dao.service;
+package com.overlay.mapper;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.overlay.mapper.UserMapper;
 import com.overlay.model.User;
 
 @Service
