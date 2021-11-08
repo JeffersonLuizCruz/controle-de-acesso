@@ -3,30 +3,32 @@
 
 <mapper namespace="com.overlay.repository.mapper.UserMapper">
 
-	<resultMap id="baseResultMap" type="com.overlay.model.User">
+	<resultMap id="baseResultMap" type="com.overlay.model.UserOwner">
 
-		<id column="id" jdbcType="BIGINT" property="id" />
+		<id column="id" jdbcType="INTEGER" property="id" />
 		<result column="name" jdbcType="VARCHAR" property="name" />
 		<result column="email" jdbcType="VARCHAR" property="email" />
 		<result column="password" jdbcType="VARCHAR" property="password" />
 
 		<result column="role" property="role" javaType="com.overlay.model.Role"
-			typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler" />
+			typeHandler="org.apache.ibatis.type.EnumTypeHandler" />
 
 		<collection property="request" ofType="com.overlay.model.Request" javaType="java.util.ArrayList">
-			<id property="id" jdbcType="BIGINT" column="id" />
+			<id property="id" jdbcType="INTEGER" column="id" />
 			<result property="subject" jdbcType="VARCHAR" column="subject" />
 			<result property="description" jdbcType="VARCHAR" column="description" />
 			<result property="criationDate" jdbcType="TIMESTAMP" column="criation_date" />
 		</collection>
 
-		<collection property="requestStages" ofType="com.overlay.model.RequestStages" javaType="java.util.ArrayList">
-			<id property="id" jdbcType="BIGINT" column="id" />
+		<collection property="requestStages" ofType="com.overlay.model.RequestStage" javaType="java.util.ArrayList">
+			<id property="id" jdbcType="INTEGER" column="id" />
 			<result property="realizationDate" jdbcType="TIMESTAMP" column="realization_date" />
 			<result property="description" jdbcType="VARCHAR" column="description" />
 		</collection>
 
 	</resultMap>
 
-
+    <select id="listAll" resultMap="baseResultMap">
+        select * from userOwner
+    </select>
 </mapper>

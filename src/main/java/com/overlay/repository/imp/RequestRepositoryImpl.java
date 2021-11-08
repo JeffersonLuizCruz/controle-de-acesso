@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.overlay.model.Request;
-import com.overlay.model.User;
+import com.overlay.model.UserOwner;
 import com.overlay.repository.RequestRepository;
 import com.overlay.repository.mapper.RequestMapper;
 
@@ -22,8 +22,8 @@ public class RequestRepositoryImpl implements RequestRepository{
 	}
 
 	@Override
-	public List<User> listAll() {
-		List<User> users = requestMapper.listAll();
+	public List<UserOwner> listAll() {
+		List<UserOwner> users = requestMapper.listAll();
 		return users;
 	}
 

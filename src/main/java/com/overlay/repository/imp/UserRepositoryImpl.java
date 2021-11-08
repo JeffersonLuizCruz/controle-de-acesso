@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.overlay.model.User;
+import com.overlay.model.UserOwner;
 import com.overlay.repository.UserRepository;
 import com.overlay.repository.mapper.UserMapper;
 
@@ -15,26 +15,26 @@ public class UserRepositoryImpl implements UserRepository{
 	@Autowired UserMapper userMapper;
 
 	@Override
-	public User getById(Long id) {
-		User user = userMapper.findById(id);
+	public UserOwner findById(Long id) {
+		UserOwner user = userMapper.findById(id);
 		return user;
 	}
 
 	@Override
-	public List<User> listAll() {
-		List<User> users = userMapper.listAll();
+	public List<UserOwner> listAll() {
+		List<UserOwner> users = userMapper.listAll();
 		return users;
 	}
 
 	@Override
-	public User save(User user) {
-		User save = userMapper.save(user);
+	public UserOwner save(UserOwner user) {
+		UserOwner save = userMapper.save(user);
 		return save;
 	}
 
 	@Override
-	public User update(User user) {
-		User update = userMapper.update(user);
+	public UserOwner update(UserOwner user) {
+		UserOwner update = userMapper.update(user);
 		return update;
 	}
 

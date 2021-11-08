@@ -4,9 +4,9 @@
     "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-	<typeHandlers>
-		<typeHandler javaType='com.overlay.model.Role'
-			handler='RoleTypeHandler' />
-		<typeHandler javaType='Role' handler='RoleTypeHandler' />
-	</typeHandlers>
+   <properties resource="application.properties"/>
+    <typeHandlers> 
+            <typeHandler javaType='com.overlay.model.Role' handler='com.overlay.repository.imp.RoleTypeHandle' /> 
+    </typeHandlers>
+   
 </configuration>

@@ -16,13 +16,13 @@ public class Request implements Serializable{
 	private LocalDate criationDate;
 	
 	private RequestState state;
-	private User user;
+	private UserOwner user;
 	private List<RequestStage> stages = new ArrayList<>();
 	
 	
 	
 	public Request() {}
-	public Request(Long id, String subject, String description, LocalDate criationDate, RequestState state, User user,
+	public Request(Long id, String subject, String description, LocalDate criationDate, RequestState state, UserOwner user,
 			List<RequestStage> stages) {
 		this.id = id;
 		this.subject = subject;
@@ -63,10 +63,10 @@ public class Request implements Serializable{
 	public void setState(RequestState state) {
 		this.state = state;
 	}
-	public User getUser() {
+	public UserOwner getUser() {
 		return user;
 	}
-	public void setUser(User user) {
+	public void setUser(UserOwner user) {
 		this.user = user;
 	}
 	public List<RequestStage> getStages() {

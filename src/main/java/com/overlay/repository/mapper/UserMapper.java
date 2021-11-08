@@ -2,17 +2,14 @@ package com.overlay.repository.mapper;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Mapper;
+import com.overlay.model.UserOwner;
 
-import com.overlay.model.User;
-
-@Mapper
 public interface UserMapper {
 	
-	User findById(Long id);
-	List<User> listAll();
-	User save(User user);
-	User update(User user);
+	UserOwner findById(Long id);
+	List<UserOwner> listAll();
+	UserOwner save(UserOwner user);
+	UserOwner update(UserOwner user);
 	void delete(Long id);
 
 }

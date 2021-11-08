@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class User implements Serializable {
+public class UserOwner implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -21,9 +21,9 @@ public class User implements Serializable {
 	
 	
 	
-	public User() {}
+	public UserOwner() {}
 
-	public User(Long id, String name, String email, String password, Role role, List<Request> requests,
+	public UserOwner(Long id, String name, String email, String password, Role role, List<Request> requests,
 			List<RequestStage> requestStages) {
 		this.id = id;
 		this.name = name;
@@ -96,7 +96,7 @@ public class User implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		UserOwner other = (UserOwner) obj;
 		return Objects.equals(id, other.id);
 	}
 	

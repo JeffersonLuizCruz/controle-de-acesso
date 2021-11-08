@@ -2,14 +2,14 @@ package com.overlay.repository;
 
 import java.util.List;
 
-import com.overlay.model.User;
+import com.overlay.model.UserOwner;
 
 public interface UserRepository {
 	
-	User getById(Long id);
-	List<User> listAll();
-	User save(User user);
-	User update(User user);
+	UserOwner findById(Long id);
+	List<UserOwner> listAll();
+	UserOwner save(UserOwner user);
+	UserOwner update(UserOwner user);
 	void delete(Long id);
 
 }

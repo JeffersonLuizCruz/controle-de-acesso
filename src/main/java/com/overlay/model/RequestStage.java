@@ -13,7 +13,7 @@ public class RequestStage implements Serializable{
 	private LocalDate realizationDate;
 	private String description;
 	
-	private User user;
+	private UserOwner user;
 	private RequestState state;
 	private Request request;
 	
@@ -21,7 +21,7 @@ public class RequestStage implements Serializable{
 	
 	public RequestStage() {}
 
-	public RequestStage(Long id, LocalDate realizationDate, String description, User user, RequestState state,
+	public RequestStage(Long id, LocalDate realizationDate, String description, UserOwner user, RequestState state,
 			Request request) {
 		this.id = id;
 		this.realizationDate = realizationDate;
@@ -55,11 +55,11 @@ public class RequestStage implements Serializable{
 		this.description = description;
 	}
 
-	public User getUser() {
+	public UserOwner getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(UserOwner user) {
 		this.user = user;
 	}
 
