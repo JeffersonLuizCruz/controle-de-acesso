@@ -10,7 +10,7 @@ import com.overlay.model.User;
 @Mapper
 public interface RequestMapper {
 	
-	Request getById(Long id);
+	Request findById(Long id);
 	List<User> listAll();
 	Request save(Request user);
 	Request update(Request user);

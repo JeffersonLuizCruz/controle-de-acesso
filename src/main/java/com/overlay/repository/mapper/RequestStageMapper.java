@@ -10,7 +10,7 @@ import com.overlay.model.User;
 @Mapper
 public interface RequestStageMapper {
 	
-	RequestStage getById(Long id);
+	RequestStage findById(Long id);
 	List<User> listAll();
 	RequestStage save(RequestStage user);
 	RequestStage update(RequestStage user);

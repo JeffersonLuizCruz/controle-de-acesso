@@ -9,7 +9,7 @@ import com.overlay.model.User;
 @Mapper
 public interface UserMapper {
 	
-	User getById(Long id);
+	User findById(Long id);
 	List<User> listAll();
 	User save(User user);
 	User update(User user);

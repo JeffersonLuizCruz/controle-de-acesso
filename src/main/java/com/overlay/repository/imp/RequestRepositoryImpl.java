@@ -11,13 +11,13 @@ import com.overlay.repository.RequestRepository;
 import com.overlay.repository.mapper.RequestMapper;
 
 @Repository
-public class RequestImpl implements RequestRepository{
+public class RequestRepositoryImpl implements RequestRepository{
 	
 	@Autowired RequestMapper requestMapper;
 
 	@Override
 	public Request getById(Long id) {
-		Request request = requestMapper.getById(id);
+		Request request = requestMapper.findById(id);
 		return request;
 	}
 
