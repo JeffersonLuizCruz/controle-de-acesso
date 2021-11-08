@@ -5,6 +5,6 @@
 
 <configuration>
     <typeHandlers> 
-            <typeHandler javaType='Role' handler='RoleTypeHandler' /> 
+            <typeHandler javaType='com.overlay.model.Role' handler='RoleTypeHandler' /> 
     </typeHandlers>
 </configuration>
