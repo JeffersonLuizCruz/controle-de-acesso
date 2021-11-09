@@ -29,6 +29,6 @@
 	</resultMap>
 
     <select id="listAll" resultMap="baseResultMap">
-        select * from userOwner
+           SELECT * from userOwner u
     </select>
 </mapper>

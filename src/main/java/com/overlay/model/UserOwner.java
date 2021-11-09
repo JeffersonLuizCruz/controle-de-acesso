@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
 
 public class UserOwner implements Serializable {
 
@@ -15,6 +18,7 @@ public class UserOwner implements Serializable {
 	private String email;
 	private String password;
 
+	@Enumerated(EnumType.STRING)
 	private Role role;
 	private List<Request> requests = new ArrayList<>();
 	private List<RequestStage> requestStages = new ArrayList<>();
