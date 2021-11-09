@@ -33,4 +33,60 @@ public class RequestStage {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	private User user;
+	
+	
+	public RequestStage() {
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public LocalDate getRealizationDate() {
+		return realizationDate;
+	}
+
+	public void setRealizationDate(LocalDate realizationDate) {
+		this.realizationDate = realizationDate;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public RequestState getState() {
+		return state;
+	}
+
+	public void setState(RequestState state) {
+		this.state = state;
+	}
+
+	public Request getRequest() {
+		return request;
+	}
+
+	public void setRequest(Request request) {
+		this.request = request;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+	
+	
+	
 }

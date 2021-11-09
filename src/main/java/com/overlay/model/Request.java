@@ -32,5 +32,83 @@ public class Request {
 	
 	private User user;
 	
+	
+	public Request() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public String getSubject() {
+		return subject;
+	}
+
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	public LocalDate getCriationDate() {
+		return criationDate;
+	}
+
+
+	public void setCriationDate(LocalDate criationDate) {
+		this.criationDate = criationDate;
+	}
+
+
+	public RequestState getState() {
+		return state;
+	}
+
+
+	public void setState(RequestState state) {
+		this.state = state;
+	}
+
+
+	public List<RequestStage> getStages() {
+		return stages;
+	}
+
+
+	public void setStages(List<RequestStage> stages) {
+		this.stages = stages;
+	}
+
+
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+	
+	
+	
 
 }
